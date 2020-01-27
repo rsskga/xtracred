@@ -18,13 +18,13 @@ shift+cmd+.
   * main memory = storage for 0s and 1s
     * each 0 or 1 = [bit](https://en.wikipedia.org/wiki/Bit)
     * all [input/output](https://en.wikipedia.org/wiki/Input/output) from [peripheral devices](https://en.wikipedia.org/wiki/Peripheral) flows through main memory
-    * [state](https://en.wikipedia.org/wiki/State_(computer_science) = particular arrangement of bits
+    * [state](https://en.wikipedia.org/wiki/State_(computer_science)) = particular arrangement of bits
     * image ([system](https://en.wikipedia.org/wiki/Disk_image) and [disk](https://en.wikipedia.org/wiki/System_image)) = a particular physical arrangement of bits
   * processor [(CPU)](https://en.wikipedia.org/wiki/Central_processing_unit)
     * operates i/o on memory
   * disks
   * network interfaces/ports
-* [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system) = big collection of bits
+* [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)) = big collection of bits
   * core of the operating system
   * software residing in memory that instructs the CPU
   * manages hardware - interfaces between the hardware and running programs
