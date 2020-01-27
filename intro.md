@@ -265,6 +265,7 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
 * More commands & shell text editors
 * More on Github work flows
   * [Code review](https://github.com/features/code-review/)
+  * [Github Cheatsheet](https://i.pinimg.com/originals/34/a8/02/34a802f8c065aa02684a96e42546171f.png)
   * Branch management
   * Git hooks
 * Heroku dev tools
