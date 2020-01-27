@@ -1,4 +1,4 @@
-# Intro to system and development environment maintenance
+# Intro to system & environment maintenance
 
 * hardware
   * main memory = storage for 0s and 1s
@@ -53,25 +53,41 @@
 # CLI - Useful Commands
 
 ## Unix/Linux
-* man
-* which
-* whoami
-* pwd
-* $APP --version
-* echo
-* cat
-* ls
-* cp
-* mv
-* touch
-* rm
-* cd
-* mkdir
-* clear / cmd+k
-* diff
-* open
-* symlinks
-* chmod
+* keyboard shortcuts
+  * `q` (quit or exit)
+  * `cmd+k` or `clear` (clear shell screen)
+* navigation & orientation
+  * `pwd` (print working directory = where am i?)
+  * `open .` (open working directory in finder)
+  * `whoami` (which user am i logged in as?)
+  * `cd` (change directory)
+  * `cd ..` (go up to parent directory)
+  * `cd ~` (go to users home directory)
+  * `cd /` (go to root directory)
+  * `cd -` (go to previous location)
+  * `cd /Users/rainagustafson` (absolute path example)
+  * `cd Users/rainagustafson` (relative path example)
+  * `ls` (list contents of current directory)
+  * `ls -la` (list contents of current directory including invisibles)
+* working with applications
+  * `echo $PATH` (print the PATH var = known locations of executables)
+  * `man open` (show documentation)
+  * `which conda` (location of executable)
+  * `conda --version` (print version - this flag varies by application)
+* working with files & streams
+  * `mkdir project` (create a directory called 'project')
+  * `touch file.txt` (create a file called 'file.txt')
+  * `cat file.txt` (print file contents)
+  * `mv file.txt project` (move file to project directory)
+  * `cp project/file.txt .` (copy from project to working directory)
+  * `diff file.txt project/file.txt` (compare two files)
+  * `rm file.txt` (delete 'file.txt')
+  * `rm -rf project` (delete 'project' directory)
+* working with permissions
+  * chmod
+* misc
+  * symlinks
+* `pipenv install twine` vs. `pipenv install -d twine`
 
 > TODO: Amer, put these in any order you like
 ## Windows
@@ -92,3 +108,13 @@
 * echo some-text > fileName(.txt)
 * fc
 
+# Future Lessons
+
+* More commands & shell text editors
+* More on Github work flows
+  * [Code review](https://github.com/features/code-review/)
+  * Branch management
+  * Git hooks
+* SQL
+  * TablePlus alternative
+* Docker
