@@ -79,9 +79,16 @@
 * where
 * cd / chdir
 * dir
+* mkdir
 * copy
 * move
 * del
 * cd
-* mkdir
+* ren file or folder
 * cls
+* $APP --version
+* rmdir myFolder
+* more thisfile.txt
+* echo some-text > fileName(.txt)
+* fc
+
