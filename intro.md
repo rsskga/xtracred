@@ -2,15 +2,15 @@
 
 Learning Objectives
 * Develop a high-level perspective on your system
-* 
+* Become comfortable working on the command line
+* Prepare for future DS projects
+  * Deploying to Heroku
+  * Running Docker
 
 ~~Before Lecture  
 Live Lecture Task  
 Assignment  
 Resources and Stretch Goals~~
-
-Dotfiles
-shift+cmd+.
 
 <img alt="CPU" width="500" src="https://cdn.pixabay.com/photo/2014/08/22/22/13/cpu-424812_1280.jpg">
 
@@ -147,13 +147,13 @@ bash, scripts that make use of bashisms may not work properly.
 zsh can be made to emulate sh by executing `zsh --emulate sh`.
 
 ## Moving to zsh series
-[Part 1: Moving to zsh](https://scriptingosx.com/2019/06/moving-to-zsh/)
-[Part 2: Configuration Files](https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files/)
-[Part 3: Shell Options](https://scriptingosx.com/2019/06/moving-to-zsh-part-3-shell-options/)
-[Part 4: Aliases and Functions](https://scriptingosx.com/2019/07/moving-to-zsh-part-4-aliases-and-functions/)
-[Part 5: Completions](https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/)
-[Part 6: Customizing the zsh Prompt](https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/)
-[Part 7: Miscellanea](https://scriptingosx.com/2019/07/moving-to-zsh-part-7-miscellanea/)
+[Part 1: Moving to zsh](https://scriptingosx.com/2019/06/moving-to-zsh/)  
+[Part 2: Configuration Files](https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files/)  
+[Part 3: Shell Options](https://scriptingosx.com/2019/06/moving-to-zsh-part-3-shell-options/)  
+[Part 4: Aliases and Functions](https://scriptingosx.com/2019/07/moving-to-zsh-part-4-aliases-and-functions/)  
+[Part 5: Completions](https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/)  
+[Part 6: Customizing the zsh Prompt](https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/)  
+[Part 7: Miscellanea](https://scriptingosx.com/2019/07/moving-to-zsh-part-7-miscellanea/)  
 [Part 8: Scripting zsh](https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/)
 
 ## Random Fun Things
@@ -189,7 +189,7 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
   * `cd /Users/rainagustafson` (absolute path example)
   * `cd Users/rainagustafson` (relative path example)
   * `ls` (list contents of current directory)
-  * `ls -la` (list contents of current directory including invisibles)
+  * `ls -la` (list dir contents including invisibles = shift+cmd+. in Finder)
   * `ls -la ~/.z*` (using * as a wildcard is called globbing)
 * working with applications
   * `echo $PATH` (print the PATH var = known locations of executables)
