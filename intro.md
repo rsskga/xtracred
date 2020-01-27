@@ -1,7 +1,7 @@
 # Intro to system & environment maintenance
 
 Learning Objectives
-* Develop a high-level perspective on how your computer works
+* Develop a high-level perspective on your system
 * 
 
 ~~Before Lecture  
@@ -16,39 +16,39 @@ shift+cmd+.
 
 * hardware
   * main memory = storage for 0s and 1s
-    * each 0 or 1 = bit
-    * all input/output from peripheral devices flows through main memory
-    * state = particular arrangement of bits
-    * image = a particular physical arrangement of bits
+    * each 0 or 1 = [bit](https://en.wikipedia.org/wiki/Bit)
+    * all [input/output](https://en.wikipedia.org/wiki/Input/output) from [peripheral devices](https://en.wikipedia.org/wiki/Peripheral) flows through main memory
+    * [state](https://en.wikipedia.org/wiki/State_(computer_science) = particular arrangement of bits
+    * image ([system](https://en.wikipedia.org/wiki/Disk_image) and [disk](https://en.wikipedia.org/wiki/System_image)) = a particular physical arrangement of bits
   * processor [(CPU)](https://en.wikipedia.org/wiki/Central_processing_unit)
     * operates i/o on memory
   * disks
   * network interfaces/ports
-* kernel = big collection of bits
+* [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system) = big collection of bits
   * core of the operating system
   * software residing in memory that instructs the CPU
   * manages hardware - interfaces between the hardware and running programs
   * runs in `kernel mode`
   * unrestricted access to `kernel space` (CPU and RAM)
   * parts
-  *  process management
-    * sets which processes are allowed to use CPU
-    * handles starting, pausing, resuming, terminating processes
-    * handles context switching amongst cores and processes
-    * multitasking appears as simultaneous running processes
-    * actually, time slices
-  * memory management
-    * which is allocated, shared, and free
-    * quarantines memory space for itself
-    * allocates to each process
-    * shares amongst processes except for private memory
-    * memory management unit (MMU) enables virtual memory
-  * device drivers
-  * system calls a.k.a. syscalls
-    * perform specific tasks that a user process alone cannot
-      * i.e., opening, reading, and writing files
-      * fork()
-      * exec(program)
+    * process management
+      * sets which processes are allowed to use CPU
+      * handles starting, pausing, resuming, terminating processes
+      * handles context switching amongst cores and processes
+      * multitasking appears as simultaneous running processes
+      * actually, time slices
+    * memory management
+      * which is allocated, shared, and free
+      * quarantines memory space for itself
+      * allocates to each process
+      * shares amongst processes except for private memory
+      * memory management unit (MMU) enables virtual memory
+    * device drivers
+    * system calls a.k.a. syscalls
+      * perform specific tasks that a user process alone cannot
+        * i.e., opening, reading, and writing files
+        * fork()
+        * exec(program)
 * (user) processes = big collection of bits
   * runs in `user mode`
   * access restricted to `user space` (safe CPU ops and a subset of RAM)
