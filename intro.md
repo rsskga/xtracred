@@ -50,6 +50,59 @@
       * use with caution and only when absolutely necessary
     * root access = administrator who can operate as root
 
+# [MacOS Shell Management](https://support.apple.com/en-us/HT208050)
+## How to change your default shell
+### From Users & Groups preferences
+1. Choose Apple menu  > System Preferences, then click Users & Groups.
+1. Click the lock , then enter your account name and password.
+1. Ctrl-click username in the list, then choose Advanced Options.
+1. Choose a shell from the ”Login shell” menu, then click OK to save.
+
+![MacOS System Preferences][img-pref]
+
+### From the command line:
+View list of available shells: `cat /etc/shells`
+
+Use `chsh` command with any available shell, i.e.:
+* `chsh -s /bin/bash`
+* `chsh -s /bin/zsh`
+
+## How to use a different shell without changing the default
+1. Open Terminal, then choose Terminal > Preferences.
+1. From the General pane, select ”Command (complete path).”
+1. In the field, enter an available shell path from `cat /etc/shells`.
+
+![Terminal Preferences][img-term]
+
+If you invoke the bash shell while macOS Catalina is configured to use a
+ different shell, you'll see a message that the default interactive
+ shell is now zsh. To silence this warning, you can add this command to
+ ~/.bash_profile or ~/.profile:
+`export BASH_SILENCE_DEPRECATION_WARNING=1`
+
+## How to switch to a zsh profile and prompt
+If you're using a bash profile, such as to set environment variables,
+aliases, or path variables, you should switch to using a zsh equivalent.
+For example:
+* .zprofile == .bash_profile and runs at login, including over SSH
+* .zshrc == .bashrc and runs for each new Terminal session
+
+If you're using `.profile` (a POSIX-compliant profile), you can make
+zsh automatically read its settings by adding this to `.zprofile`:
+`[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'`
+
+You can also move some settings from a bash profile to a zsh profile
+without modification. For example, to set environment variables:
+`export MY_SETTING=1`
+
+## How to test your shell scripts
+To test script compatibility with Bourne-compatible shells in macOS
+Catalina, you can change `/var/select/sh` to `/bin/bash`, `/bin/dash`,
+or `/bin/zsh`. If you change `/var/select/sh` to a shell other than
+bash, scripts that make use of bashisms may not work properly.
+
+zsh can be made to emulate sh by executing `zsh --emulate sh`.
+
 # CLI - Useful Commands
 
 ## Unix/Linux
@@ -118,3 +171,6 @@
 * SQL
   * TablePlus alternative
 * Docker
+
+[img-pref]: https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-system-prefs-users-groups-advanced-login-shell.jpg
+[img-term]: https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-terminal-preferences-general-shells.jpg
