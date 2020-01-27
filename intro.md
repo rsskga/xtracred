@@ -1,12 +1,26 @@
 # Intro to system & environment maintenance
 
+Learning Objectives
+* Develop a high-level perspective on how your computer works
+* 
+
+~~Before Lecture  
+Live Lecture Task  
+Assignment  
+Resources and Stretch Goals~~
+
+Dotfiles
+shift+cmd+.
+
+<img alt="CPU" width="500" src="https://cdn.pixabay.com/photo/2014/08/22/22/13/cpu-424812_1280.jpg">
+
 * hardware
   * main memory = storage for 0s and 1s
     * each 0 or 1 = bit
     * all input/output from peripheral devices flows through main memory
     * state = particular arrangement of bits
     * image = a particular physical arrangement of bits
-  * processor (CPU)
+  * processor [(CPU)](https://en.wikipedia.org/wiki/Central_processing_unit)
     * operates i/o on memory
   * disks
   * network interfaces/ports
@@ -68,7 +82,7 @@ it's an open source licensing issue. I highly recommend reading this article. He
 that custom bash installations reside in a different directory, usually
 `/usr/local/bin/bash`.
 
-Others claim that [zsh is better](http://zpalexander.com/switching-to-zsh/).
+Others claim that [zsh is better](http://zpalexander.com/switching-to-zsh/) and share a slide deck on the history of shells.
 
 ## How to change your default shell
 ### From Users & Groups preferences
@@ -77,7 +91,7 @@ Others claim that [zsh is better](http://zpalexander.com/switching-to-zsh/).
 1. Ctrl-click username in the list, then choose Advanced Options.
 1. Choose a shell from the ”Login shell” menu, then click OK to save.
 
-![MacOS System Preferences][img-pref]
+<img alt="MacOS System Preferences" width="500" src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-system-prefs-users-groups-advanced-login-shell.jpg">
 
 ### From the command line:
 View list of available shells: `cat /etc/shells`
@@ -92,7 +106,7 @@ Use `chsh` command with any available shell, i.e.:
 1. From the General pane, select ”Command (complete path).”
 1. In the field, enter an available shell path from `cat /etc/shells`.
 
-![Terminal Preferences][img-term]
+<img alt="Terminal Preferences" width="500" src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-terminal-preferences-general-shells.jpg">
 
 ### From the command line:
 `zsh` (creates a subshell - i.e. temporary shell)
@@ -148,12 +162,24 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
 # CLI - Useful Commands
 
 ## Unix/Linux
-* keyboard shortcuts
+* [keyboard shortcuts](https://support.apple.com/guide/terminal/keyboard-shortcuts-trmlshtcts/mac)
+  * `tab` (select autocomplete)
+  * `ctrl-c` (exit mid-command)
+  * `↑` (reload last used command)
+  * `ctrl-a` (move cursor to beginning of line)
+  * `ctrl-e` (move cursor to end of line)
+  * `ctrl-d` (delete forward)
+  * `ctrl-u` (delete to beginning of line)
+  * `ctrl-k` (delete to end of line)
+  * `opt+→` (reposition cursor)
+  * `ctrl-t` (transpose two characters)
+  * `ctrl-r` (search command history)
   * `q` (quit or exit)
   * `cmd+k` or `clear` (clear shell screen)
 * navigation & orientation
   * `pwd` (print working directory = where am i?)
   * `open .` (open working directory in finder)
+  * `w` (list currently logged in users)
   * `whoami` (which user am i logged in as?)
   * `cd` (change directory)
   * `cd ..` (go up to parent directory)
@@ -164,6 +190,7 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
   * `cd Users/rainagustafson` (relative path example)
   * `ls` (list contents of current directory)
   * `ls -la` (list contents of current directory including invisibles)
+  * `ls -la ~/.z*` (using * as a wildcard is called globbing)
 * working with applications
   * `echo $PATH` (print the PATH var = known locations of executables)
   * `man open` (show documentation)
@@ -178,13 +205,22 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
   * `diff file.txt project/file.txt` (compare two files)
   * `rm file.txt` (delete 'file.txt')
   * `rm -rf project` (delete 'project' directory)
+  * `curl`
+  * `wget`
+* working with text
+  * `sort`
+  * `uniq`
+  * `sed`
+  * `tr`
+  * `grep`
 * working with permissions
   * chmod
 * misc
+  * alias
+  * history
   * symlinks
 * `pipenv install twine` vs. `pipenv install -d twine`
 
-> TODO: Amer, put these in any order you like
 ## Windows
 * help
 * where
@@ -204,15 +240,14 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
 * fc
 
 # Future Lessons
-
+* Dotfiles
 * More commands & shell text editors
 * More on Github work flows
   * [Code review](https://github.com/features/code-review/)
   * Branch management
   * Git hooks
-* SQL
-  * TablePlus alternative
+* Heroku dev tools
 * Docker
+* SQL / NoSQL
+  * TablePlus alternative
 
-[img-pref]: https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-system-prefs-users-groups-advanced-login-shell.jpg
-[img-term]: https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/Mojave/macos-mojave-terminal-preferences-general-shells.jpg
