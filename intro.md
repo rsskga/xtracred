@@ -51,6 +51,25 @@
     * root access = administrator who can operate as root
 
 # [MacOS Shell Management](https://support.apple.com/en-us/HT208050)
+Default prompt styles:  
+`$` prompt = bash  
+`%` prompt = zsh
+
+```
+The default interactive shell is now zsh. To update your account to use
+zsh, please run `chsh -s /bin/zsh`. For more details, please visit
+https://support.apple.com/kb/HT208050.
+```
+
+## Why did Apple change the default MacOS shell?
+[According the Armin Briegel](https://scriptingosx.com/2019/06/moving-to-zsh/),
+it's an open source licensing issue. I highly recommend reading this article. He also describes the process of
+[manually downloading and installing a newer version of bash](https://scriptingosx.com/2019/02/install-bash-5-on-macos/) and notes
+that custom bash installations reside in a different directory, usually
+`/usr/local/bin/bash`.
+
+Others claim that [zsh is better](http://zpalexander.com/switching-to-zsh/).
+
 ## How to change your default shell
 ### From Users & Groups preferences
 1. Choose Apple menu  > System Preferences, then click Users & Groups.
@@ -68,11 +87,16 @@ Use `chsh` command with any available shell, i.e.:
 * `chsh -s /bin/zsh`
 
 ## How to use a different shell without changing the default
+### From Terminal preferences
 1. Open Terminal, then choose Terminal > Preferences.
 1. From the General pane, select ”Command (complete path).”
 1. In the field, enter an available shell path from `cat /etc/shells`.
 
 ![Terminal Preferences][img-term]
+
+### From the command line:
+`zsh` (creates a subshell - i.e. temporary shell)
+`exit` (leave the subshell)
 
 If you invoke the bash shell while macOS Catalina is configured to use a
  different shell, you'll see a message that the default interactive
@@ -80,7 +104,9 @@ If you invoke the bash shell while macOS Catalina is configured to use a
  ~/.bash_profile or ~/.profile:
 `export BASH_SILENCE_DEPRECATION_WARNING=1`
 
-## How to switch to a zsh profile and prompt
+##
+
+## How to switch to a default zsh profile and prompt
 If you're using a bash profile, such as to set environment variables,
 aliases, or path variables, you should switch to using a zsh equivalent.
 For example:
@@ -96,12 +122,28 @@ without modification. For example, to set environment variables:
 `export MY_SETTING=1`
 
 ## How to test your shell scripts
+Set/reset the shebang in shell scripts.
+`#!/bin/zsh.`
+
 To test script compatibility with Bourne-compatible shells in macOS
 Catalina, you can change `/var/select/sh` to `/bin/bash`, `/bin/dash`,
 or `/bin/zsh`. If you change `/var/select/sh` to a shell other than
 bash, scripts that make use of bashisms may not work properly.
 
 zsh can be made to emulate sh by executing `zsh --emulate sh`.
+
+## Moving to zsh series
+[Part 1: Moving to zsh](https://scriptingosx.com/2019/06/moving-to-zsh/)
+[Part 2: Configuration Files](https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files/)
+[Part 3: Shell Options](https://scriptingosx.com/2019/06/moving-to-zsh-part-3-shell-options/)
+[Part 4: Aliases and Functions](https://scriptingosx.com/2019/07/moving-to-zsh-part-4-aliases-and-functions/)
+[Part 5: Completions](https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/)
+[Part 6: Customizing the zsh Prompt](https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/)
+[Part 7: Miscellanea](https://scriptingosx.com/2019/07/moving-to-zsh-part-7-miscellanea/)
+[Part 8: Scripting zsh](https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/)
+
+## Random Fun Things
+[Starship](https://github.com/starship/starship)
 
 # CLI - Useful Commands
 
