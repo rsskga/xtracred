@@ -222,22 +222,43 @@ zsh can be made to emulate sh by executing `zsh --emulate sh`.
 * `pipenv install twine` vs. `pipenv install -d twine`
 
 ## Windows
-* help
-* where
-* cd / chdir
-* dir
-* mkdir
-* copy
-* move
-* del
-* cd
-* ren file or folder
-* cls
-* $APP --version
-* rmdir myFolder
-* more thisfile.txt
-* echo some-text > fileName(.txt)
-* fc
+* `whoami` (which user am i logged in as?)
+* `systeminfo` (shows system info)
+* `systeminfo | findstr "Total Physical Memory"` (shows total RAM memory used)
+* `time` (displays and changes time)
+* `date` (displays and changes date)
+* `tab` (select autocomplete)
+* `ctrl-c` (exit mid-command)
+* `↑` (reload last used command)
+* `exit` (quit or exit)
+* `help` (show documentation)
+* `cd / chdir` (print working directory = where am i?)
+* `cd ..` (go up to parent directory)
+* `cd ~` (go to users home directory)
+* `cd /` (go to root directory)
+* `cd -` (go to previous location)
+* `cd <path to directory>` (Change folder/directory)
+* `cd /Users/rainagustafson` (absolute path example)
+* `cd Users/rainagustafson` (relative path example)
+* `dir` (list contents of current directory)
+* `mkdir project` (create a directory called 'project')
+* `echo some-text > file(.txt)` (create a file called 'file.txt' with some-text)
+* `more file.txt` (print file contents)
+* `file.txt` (opens the file)
+* `find or findstr` (finds a string of text in a file)
+* `move file.txt project` (move file to project directory)
+* `del file.txt` (delete 'file.txt')
+* `copy file.txt .` (copy from project to working directory)
+* `fc file1.txt file2.txt` (compare two files)
+* `ren file.txt or folder` (rename file or folder)
+* `rmdir project` (delete 'project' directory)
+* `cls` (clear shell screen)
+* `code filename.py` (opens file using VSCode)
+* `where conda` (location of executable)
+* `conda --version` (print version - this flag varies by application)
+* `curl`
+* `wget`
+
 
 # Future Lessons
 * Dotfiles
